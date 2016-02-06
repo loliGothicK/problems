@@ -10,5 +10,5 @@ int main(){
 	for(auto&& e : edge)
 		cin >> e;
 	sort(edge.begin(),edge.end());
-	cout << ( edge[2] > edge[0]+edge[1] ? -1 : sq(edge[2]) == sq(edge[0])+sq(edge[1]) ? 1 : 0 ) << endl;
+	cout << ( edge[2] >= edge[0]+edge[1] ? -1 : sq(edge[2]) == sq(edge[0])+sq(edge[1]) ? 1 : 0 ) << endl;
 }
