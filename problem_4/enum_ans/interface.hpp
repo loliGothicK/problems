@@ -13,12 +13,12 @@ namespace Interface{
     public:
         //default ctor
         constexpr A() = default;
-	~A() = default;
-	//calculate function object
-	static short Calculate(short const& l, short const& r)
-	{
-			return l + r ;
-	}
+        ~A() = default;
+        //calculate function object
+        static short Calculate(short const& l, short const& r)
+        {
+            return l + r ;
+        }
     } ;
 
     //interface of Subtraction
@@ -26,25 +26,25 @@ namespace Interface{
     {
     public:
         constexpr B() = default;
-	~B() = default;
+        ~B() = default;
 
-	static short Calculate(short const& l, short const& r)
-	{
-			return l - r ;
-	}
+        static short Calculate(short const& l, short const& r)
+        {
+            return l - r ;
+        }
     } ;
 
     //interface of Multiplication
     class C : public callable<C>
     {
     public:
-	constexpr C() = default;
-	~C() = default;
+        constexpr C() = default;
+        ~C() = default;
 
-	static short Calculate(short const& l, short const& r)
-	{
-		return l * r ;
-	}
+        static short Calculate(short const& l, short const& r)
+        {
+            return l * r ;
+        }
     } ;
 
     //interface of Division
@@ -52,12 +52,12 @@ namespace Interface{
     {
     public:
         constexpr D() = default;
-	~D() = default;
+        ~D() = default;
 
-	static short Calculate(short const& l, short const& r)
-	{
-		return l / r ;
-	}
+        static short Calculate(short const& l, short const& r)
+        {
+            return l / r ;
+        }
     } ;
 
     //interface of Special Operator
@@ -65,12 +65,12 @@ namespace Interface{
     {
     public:
         constexpr E() = default;
-	~E() = default;
+        ~E() = default;
 
         static short Calculate(short const& l, short const& r)
-	{
-		return l + r + 5 ;
-	}
+        {
+            return l + r + 5 ;
+        }
     } ;
 
 
