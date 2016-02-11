@@ -7,8 +7,8 @@ using std::endl;
 using namespace Interface;
 
 int main() {
-	// Zを用いてインスタンスを得る
-	// インターフェースクラスはZのテンプレートパラメータで指定する
+    // Zを用いてインスタンスを得る
+    // インターフェースクラスはZのテンプレートパラメータで指定する
     auto&& a = Z<A>::get_instance();
     auto&& b = Z<B>::get_instance();
 
