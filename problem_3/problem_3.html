@@ -1,17 +1,41 @@
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <head>
 	<title>SFINAE</title>>
 </head>>
 <section>
+2/11 問題訂正（青＝修正 赤＝追加）
+
 <h3>問題文</h3>
 
 <p>以下の使用に基づいてコードを記述してください.<br>
-フリー関数print(T const&)を定義します、以下の仕様が求められています。<br>
+フリー関数
+<pre style="color:#0000FF">
+<code>
+template < typename T >
+print(T&& x)
+</code>
+</pre>
+を定義します、以下の仕様が求められています。<br><br>
 <br>
 ・もしTがメンバ関数print()を持っていればそれを呼ぶ<br>
+<pre style="color:#0000FF">
+<code>
+return x.print();
+</code>
+</pre>
 <br>
 ・でなければ変数を標準出力する<br>
-<br>
+<pre style="color:#0000FF">
+<code>
+return cout << x << endl;
+</code>
+</pre>
+<div style="color:#FF0000">
+・両方できなければ何もしない（コンパイルエラーにせず、例外も投げず握りつぶす）<br>
+</div>
+
+<br><br><br>
 作成したプログラムに関する制限事項、もしくは考慮、改善すべき点等がある場合には、コメントとして記述してください.<br>
 </p>
 
