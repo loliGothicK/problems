@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+Trial 2
+</title>
+<style type="text/css">
+body {font-size:20px;}
+</style>
+</head>
+<body>
+<h1>Trial 2</h1>
+
+<div size="20">
+比較的小さい正の整数 N が素数であるかどうかを判定するためには j を<br>
+2 から N-1 まで増やして, N を j で割り算したあまりが 0 であるかを判定し,<br>
+一つでも 0 になったら素数でない, 最後まで 0 でなければ素数とする算法が使用できます.<br>
+しかし, この素朴な算法は無駄が多すぎて非効率的です.<br>
+割ってみる範囲を狭くして効率化をはかるには, どのように修正すればよいか.<br><br>
+
+以下のC++のコードは上記の素朴な算法を関数として記述したものである.<br>
+このコードを修正し, その方法と理由をコメント文で説明しなさい<br>
+
+<pre>
+<code>
+bool is_prime(unsigned long long n){
+  if(n&lt;2) return false;
+  for(unsigned long long j=2; j&lt;n; ++j)
+    if(n%j==0) return false;
+  return true;
+}
+</code>
+</pre>
+
+ヒント：<br>
+O(N)→O(√N)の改善が一つと<br>
+定数倍の改善策が２つあります<br>
+提出はコードを<br>
+[ jostaberry.jam+judge@gmail.com ] まで添付して送ってください<br>
+
+</div>
+</body>
+</html>
